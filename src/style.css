@@ -5,7 +5,7 @@
 }
 
 .hero {
-  min-height: 86vh;
+  min-height: 90vh;
   width: 100%;
   background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
     url(./img/B1.jpeg);
@@ -32,7 +32,7 @@ nav {
 }
 
 .nav-logo img {
-  height: 10vh;
+  height: 7vh;
   cursor: pointer;
 }
 
@@ -220,4 +220,22 @@ h3 {
   font-weight: 350;
   line-height: 22px;
   padding: 10px;
+}
+
+/*------Image of the day-------*/
+
+.imageOfTheDay {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+}
+
+/*------Activities-------*/
+
+.activities {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
 }

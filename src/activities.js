@@ -1,7 +1,7 @@
 import { removeContent } from "./removeContent";
 import { navigation } from "./navigation";
 
-export function imageOfTheDay() {
+export function activities() {
   removeContent();
   const content = document.getElementById("content");
   // create header section
@@ -12,10 +12,10 @@ export function imageOfTheDay() {
   header.appendChild(nav);
   content.appendChild(header);
 
-  const imageOfTheDay = document.createElement("section");
-  imageOfTheDay.classList.add("imageOfTheDay");
-  const imageOfTheDayHeading = document.createElement("h1");
-  imageOfTheDayHeading.textContent = "Imagen del día";
-  imageOfTheDay.appendChild(imageOfTheDayHeading);
-  content.appendChild(imageOfTheDay);
+  const activities = document.createElement("section");
+  activities.classList.add("activities");
+  const activitiesHeading = document.createElement("h1");
+  activitiesHeading.textContent = "Actividades";
+  activities.appendChild(activitiesHeading);
+  content.appendChild(activities);
 }

@@ -4,20 +4,27 @@ import { navigation } from "./navigation.js";
 import { hideMenu } from "./mobileMenuTransition";
 import { showMenu } from "./mobileMenuTransition";
 import { hero } from "./hero";
+import { removeContent } from "./removeContent";
 
-// Add your JavaScript code here
-console.log("Hello, world!");
+export function index() {
+  removeContent();
 
-// get body element
-const content = document.getElementById("content");
+  // Add your JavaScript code here
+  console.log("Hello, world!");
 
-// call the navigation function and append the nav element to the hero section
-const nav = navigation();
-content.appendChild(nav);
+  // get body element
+  const content = document.getElementById("content");
 
-const heroSection = hero();
-content.appendChild(heroSection);
+  // call the navigation function and append the nav element to the hero section
+  const nav = navigation();
+  content.appendChild(nav);
 
-// create aboutUs section
-const aboutUsSection = aboutUs();
-content.appendChild(aboutUsSection);
+  const heroSection = hero();
+  content.appendChild(heroSection);
+
+  // create aboutUs section
+  const aboutUsSection = aboutUs();
+  content.appendChild(aboutUsSection);
+}
+
+index();

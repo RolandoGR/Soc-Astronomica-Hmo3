@@ -1,8 +1,12 @@
+import { index } from "./index.js";
 import { aboutUs } from "./aboutUs";
+import { activities } from "./activities";
+import { newsSection } from "./news";
 import { imageOfTheDay } from "./imageOfDay";
 import logo from "./img/logosahuaro.png";
 import { hideMenu, showMenu } from "./mobileMenuTransition";
 import { scrollToSection } from "./scroll";
+
 export function navigation() {
   // create navigation element
   const nav = document.createElement("nav");
@@ -11,6 +15,11 @@ export function navigation() {
   navLogo.classList.add("nav-logo");
   const logoImage = document.createElement("img");
   logoImage.src = logo;
+  logoImage.addEventListener("click", (event) => {
+    event.preventDefault();
+    index();
+  });
+
   const textLink = document.createElement("a");
   textLink.href = "index.html";
   const navText = document.createElement("div");
@@ -36,12 +45,17 @@ export function navigation() {
   link1.textContent = "Actividades";
   link1.addEventListener("click", (event) => {
     event.preventDefault();
+    activities();
   });
   li1.appendChild(link1);
   const li2 = document.createElement("li");
   const link2 = document.createElement("a");
   link2.href = "#";
   link2.textContent = "Noticias";
+  link2.addEventListener("click", (event) => {
+    event.preventDefault();
+    newsSection();
+  });
   li2.appendChild(link2);
   const li3 = document.createElement("li");
   const link3 = document.createElement("a");
@@ -54,6 +68,7 @@ export function navigation() {
   li3.appendChild(link3);
   const li4 = document.createElement("li");
   const link4 = document.createElement("a");
+  link4.href = "#";
 
   link4.textContent = "Galería";
   li4.appendChild(link4);
