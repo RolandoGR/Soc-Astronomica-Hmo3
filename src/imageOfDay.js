@@ -1,5 +1,6 @@
 import { removeContent } from "./removeContent";
 import { navigation } from "./navigation";
+import { keyApod } from "./keyApod";
 
 export function imageOfTheDay() {
   removeContent();
@@ -17,5 +18,36 @@ export function imageOfTheDay() {
   const imageOfTheDayHeading = document.createElement("h1");
   imageOfTheDayHeading.textContent = "Imagen del día";
   imageOfTheDay.appendChild(imageOfTheDayHeading);
+
+  const apodUrl = `https://api.nasa.gov/planetary/apod?api_key=${keyApod}`;
+  const apodImg = document.createElement("img");
+  apodImg.classList.add("apodImg");
+
+  const apodTitle = document.createElement("h3");
+  apodTitle.classList.add("apodTitle");
+
+  const apodExpl = document.createElement("div");
+  apodExpl.classList.add("apodExpl");
+
+  function getApod() {
+    console.log(keyApod);
+    fetch(apodUrl, { mode: "cors" })
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (response) {
+        console.log(response);
+        apodImg.src = response.hdurl;
+        apodExpl.textContent = response.explanation;
+        apodTitle.textContent = response.title;
+      });
+  }
+
+  getApod();
+
+  imageOfTheDay.appendChild(apodTitle);
+  imageOfTheDay.appendChild(apodImg);
+  imageOfTheDay.appendChild(apodExpl);
+
   content.appendChild(imageOfTheDay);
 }
