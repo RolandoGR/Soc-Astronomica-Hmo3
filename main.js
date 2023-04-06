@@ -10,6 +10,26 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/img/EDUCACION.jpg":
+/*!*******************************!*\
+  !*** ./src/img/EDUCACION.jpg ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"images/EDUCACION.jpg\");\n\n//# sourceURL=webpack://soc-astro3/./src/img/EDUCACION.jpg?");
+
+/***/ }),
+
+/***/ "./src/img/INVESTIGACION.jpg":
+/*!***********************************!*\
+  !*** ./src/img/INVESTIGACION.jpg ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"images/INVESTIGACION.jpg\");\n\n//# sourceURL=webpack://soc-astro3/./src/img/INVESTIGACION.jpg?");
+
+/***/ }),
+
 /***/ "./src/img/LOGO3.png":
 /*!***************************!*\
   !*** ./src/img/LOGO3.png ***!
@@ -17,6 +37,26 @@
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"images/LOGO3.png\");\n\n//# sourceURL=webpack://soc-astro3/./src/img/LOGO3.png?");
+
+/***/ }),
+
+/***/ "./src/img/OBSERVACIONES.jpg":
+/*!***********************************!*\
+  !*** ./src/img/OBSERVACIONES.jpg ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"images/OBSERVACIONES.jpg\");\n\n//# sourceURL=webpack://soc-astro3/./src/img/OBSERVACIONES.jpg?");
+
+/***/ }),
+
+/***/ "./src/img/REUNIONES.jpg":
+/*!*******************************!*\
+  !*** ./src/img/REUNIONES.jpg ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"images/REUNIONES.jpg\");\n\n//# sourceURL=webpack://soc-astro3/./src/img/REUNIONES.jpg?");
 
 /***/ }),
 
@@ -46,7 +86,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"activities\": () => (/* binding */ activities)\n/* harmony export */ });\n/* harmony import */ var _removeContent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./removeContent */ \"./src/removeContent.js\");\n/* harmony import */ var _navigation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./navigation */ \"./src/navigation.js\");\n\n\n\nfunction activities() {\n  (0,_removeContent__WEBPACK_IMPORTED_MODULE_0__.removeContent)();\n  const content = document.getElementById(\"content\");\n  // create header section\n  const header = document.createElement(\"section\");\n  header.classList.add(\"header\");\n\n  const nav = (0,_navigation__WEBPACK_IMPORTED_MODULE_1__.navigation)();\n  header.appendChild(nav);\n  content.appendChild(header);\n\n  const activities = document.createElement(\"section\");\n  activities.classList.add(\"activities\");\n  const activitiesHeading = document.createElement(\"h1\");\n  activitiesHeading.textContent = \"Actividades\";\n  activities.appendChild(activitiesHeading);\n  content.appendChild(activities);\n}\n\n\n//# sourceURL=webpack://soc-astro3/./src/activities.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"activities\": () => (/* binding */ activities)\n/* harmony export */ });\n/* harmony import */ var _removeContent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./removeContent */ \"./src/removeContent.js\");\n/* harmony import */ var _navigation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./navigation */ \"./src/navigation.js\");\n/* harmony import */ var _img_REUNIONES_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./img/REUNIONES.jpg */ \"./src/img/REUNIONES.jpg\");\n/* harmony import */ var _img_OBSERVACIONES_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./img/OBSERVACIONES.jpg */ \"./src/img/OBSERVACIONES.jpg\");\n/* harmony import */ var _img_INVESTIGACION_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./img/INVESTIGACION.jpg */ \"./src/img/INVESTIGACION.jpg\");\n/* harmony import */ var _img_EDUCACION_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./img/EDUCACION.jpg */ \"./src/img/EDUCACION.jpg\");\n\n\n\n\n\n\n\nfunction activities() {\n  (0,_removeContent__WEBPACK_IMPORTED_MODULE_0__.removeContent)();\n  const content = document.getElementById(\"content\");\n  // create header section\n  const header = document.createElement(\"section\");\n  header.classList.add(\"header\");\n\n  const nav = (0,_navigation__WEBPACK_IMPORTED_MODULE_1__.navigation)();\n  header.appendChild(nav);\n  content.appendChild(header);\n\n  const activities = document.createElement(\"section\");\n  activities.classList.add(\"activities\");\n  const activitiesHeading = document.createElement(\"h1\");\n  activitiesHeading.textContent = \"Actividades\";\n\n  const listaActividades = document.createElement(\"ol\");\n\n  const itemReuniones = document.createElement(\"li\");\n  itemReuniones.textContent =\n    \"Reuniones y eventos: La sociedad astronómica organiza regularmente reuniones y eventos donde los miembros pueden compartir sus conocimientos y aprender más sobre la astronomía. Estas reuniones son una oportunidad para conectarse con otros entusiastas de la astronomía y aprender de expertos en la materia.\";\n  const imagenReuniones = document.createElement(\"img\");\n  imagenReuniones.src = _img_REUNIONES_jpg__WEBPACK_IMPORTED_MODULE_2__[\"default\"];\n  imagenReuniones.alt = \"Reuniones y eventos\";\n  itemReuniones.appendChild(imagenReuniones);\n  listaActividades.appendChild(itemReuniones);\n\n  const itemObservaciones = document.createElement(\"li\");\n  itemObservaciones.textContent =\n    \"Observaciones astronómicas: La sociedad astronómica organiza observaciones astronómicas para que los miembros puedan ver los cuerpos celestes en acción. Estas observaciones pueden incluir el uso de telescopios y otros instrumentos para explorar el universo y descubrir nuevas maravillas.\";\n  const imagenObservaciones = document.createElement(\"img\");\n  imagenObservaciones.src = _img_OBSERVACIONES_jpg__WEBPACK_IMPORTED_MODULE_3__[\"default\"];\n  imagenObservaciones.alt = \"Reuniones y eventos\";\n  itemObservaciones.appendChild(imagenObservaciones);\n  listaActividades.appendChild(itemObservaciones);\n  listaActividades.appendChild(itemObservaciones);\n\n  const itemInvestigacion = document.createElement(\"li\");\n  itemInvestigacion.textContent =\n    \"Investigación: Los miembros de la sociedad astronómica también pueden participar en proyectos de investigación y colaborar con otros astrónomos en la comunidad científica. Esto les permite contribuir a la comprensión del universo y ser parte de una comunidad científica global.\";\n  const imagenInvestigacion = document.createElement(\"img\");\n  imagenInvestigacion.src = _img_INVESTIGACION_jpg__WEBPACK_IMPORTED_MODULE_4__[\"default\"];\n  imagenInvestigacion.alt = \"Reuniones y eventos\";\n  itemInvestigacion.appendChild(imagenInvestigacion);\n  listaActividades.appendChild(itemInvestigacion);\n  listaActividades.appendChild(itemInvestigacion);\n\n  const itemEducacion = document.createElement(\"li\");\n  itemEducacion.textContent =\n    \"Educación y divulgación científica: La sociedad astronómica de Hermosillo también se enfoca en la educación y divulgación científica, organizando talleres y charlas para estudiantes y la comunidad en general. Esto ayuda a crear conciencia y fomentar el interés en la ciencia y la astronomía en particular.\";\n  const imagenEducacion = document.createElement(\"img\");\n  imagenEducacion.src = _img_EDUCACION_jpg__WEBPACK_IMPORTED_MODULE_5__[\"default\"];\n  imagenEducacion.alt = \"Reuniones y eventos\";\n  itemEducacion.appendChild(imagenEducacion);\n  listaActividades.appendChild(itemEducacion);\n\n  listaActividades.appendChild(itemEducacion);\n\n  activities.appendChild(activitiesHeading);\n  activities.appendChild(listaActividades);\n\n  content.appendChild(activities);\n}\n\n\n//# sourceURL=webpack://soc-astro3/./src/activities.js?");
 
 /***/ }),
 
@@ -66,7 +106,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"imageOfTheDay\": () => (/* binding */ imageOfTheDay)\n/* harmony export */ });\n/* harmony import */ var _removeContent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./removeContent */ \"./src/removeContent.js\");\n/* harmony import */ var _navigation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./navigation */ \"./src/navigation.js\");\n\n\n\nfunction imageOfTheDay() {\n  (0,_removeContent__WEBPACK_IMPORTED_MODULE_0__.removeContent)();\n  const content = document.getElementById(\"content\");\n  // create header section\n  const header = document.createElement(\"section\");\n  header.classList.add(\"header\");\n\n  const nav = (0,_navigation__WEBPACK_IMPORTED_MODULE_1__.navigation)();\n  header.appendChild(nav);\n  content.appendChild(header);\n\n  const imageOfTheDay = document.createElement(\"section\");\n  imageOfTheDay.classList.add(\"imageOfTheDay\");\n  const imageOfTheDayHeading = document.createElement(\"h1\");\n  imageOfTheDayHeading.textContent = \"Imagen del día\";\n  imageOfTheDay.appendChild(imageOfTheDayHeading);\n  content.appendChild(imageOfTheDay);\n}\n\n\n//# sourceURL=webpack://soc-astro3/./src/imageOfDay.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"imageOfTheDay\": () => (/* binding */ imageOfTheDay)\n/* harmony export */ });\n/* harmony import */ var _removeContent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./removeContent */ \"./src/removeContent.js\");\n/* harmony import */ var _navigation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./navigation */ \"./src/navigation.js\");\n/* harmony import */ var _keyApod__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./keyApod */ \"./src/keyApod.js\");\n\n\n\n\nfunction imageOfTheDay() {\n  (0,_removeContent__WEBPACK_IMPORTED_MODULE_0__.removeContent)();\n  const content = document.getElementById(\"content\");\n  // create header section\n  const header = document.createElement(\"section\");\n  header.classList.add(\"header\");\n\n  const nav = (0,_navigation__WEBPACK_IMPORTED_MODULE_1__.navigation)();\n  header.appendChild(nav);\n  content.appendChild(header);\n\n  const imageOfTheDay = document.createElement(\"section\");\n  imageOfTheDay.classList.add(\"imageOfTheDay\");\n  const imageOfTheDayHeading = document.createElement(\"h1\");\n  imageOfTheDayHeading.textContent = \"Imagen del día\";\n  imageOfTheDay.appendChild(imageOfTheDayHeading);\n\n  const apodUrl = `https://api.nasa.gov/planetary/apod?api_key=${_keyApod__WEBPACK_IMPORTED_MODULE_2__.keyApod}`;\n  const apodImg = document.createElement(\"img\");\n  apodImg.classList.add(\"apodImg\");\n\n  const apodTitle = document.createElement(\"h3\");\n  apodTitle.classList.add(\"apodTitle\");\n\n  const apodExpl = document.createElement(\"div\");\n  apodExpl.classList.add(\"apodExpl\");\n\n  function getApod() {\n    console.log(_keyApod__WEBPACK_IMPORTED_MODULE_2__.keyApod);\n    fetch(apodUrl, { mode: \"cors\" })\n      .then(function (response) {\n        return response.json();\n      })\n      .then(function (response) {\n        console.log(response);\n        apodImg.src = response.hdurl;\n        apodExpl.textContent = response.explanation;\n        apodTitle.textContent = response.title;\n      });\n  }\n\n  getApod();\n\n  imageOfTheDay.appendChild(apodTitle);\n  imageOfTheDay.appendChild(apodImg);\n  imageOfTheDay.appendChild(apodExpl);\n\n  content.appendChild(imageOfTheDay);\n}\n\n\n//# sourceURL=webpack://soc-astro3/./src/imageOfDay.js?");
 
 /***/ }),
 
@@ -77,6 +117,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"index\": () => (/* binding */ index)\n/* harmony export */ });\n/* harmony import */ var _aboutUs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./aboutUs */ \"./src/aboutUs.js\");\n/* harmony import */ var _img_LOGO3_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./img/LOGO3.png */ \"./src/img/LOGO3.png\");\n/* harmony import */ var _navigation_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./navigation.js */ \"./src/navigation.js\");\n/* harmony import */ var _mobileMenuTransition__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./mobileMenuTransition */ \"./src/mobileMenuTransition.js\");\n/* harmony import */ var _hero__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./hero */ \"./src/hero.js\");\n/* harmony import */ var _removeContent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./removeContent */ \"./src/removeContent.js\");\n\n\n\n\n\n\n\n\nfunction index() {\n  (0,_removeContent__WEBPACK_IMPORTED_MODULE_5__.removeContent)();\n\n  // Add your JavaScript code here\n  console.log(\"Hello, world!\");\n\n  // get body element\n  const content = document.getElementById(\"content\");\n\n  // call the navigation function and append the nav element to the hero section\n  const nav = (0,_navigation_js__WEBPACK_IMPORTED_MODULE_2__.navigation)();\n  content.appendChild(nav);\n\n  const heroSection = (0,_hero__WEBPACK_IMPORTED_MODULE_4__.hero)();\n  content.appendChild(heroSection);\n\n  // create aboutUs section\n  const aboutUsSection = (0,_aboutUs__WEBPACK_IMPORTED_MODULE_0__.aboutUs)();\n  content.appendChild(aboutUsSection);\n}\n\nindex();\n\n\n//# sourceURL=webpack://soc-astro3/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/keyApod.js":
+/*!************************!*\
+  !*** ./src/keyApod.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"keyApod\": () => (/* binding */ keyApod)\n/* harmony export */ });\nconst keyApod = \"DjiXjdhbOJy9VZ5zapoj0l39b2vCrHHHZdCsMU0A\";\n\n\n\n//# sourceURL=webpack://soc-astro3/./src/keyApod.js?");
 
 /***/ }),
 

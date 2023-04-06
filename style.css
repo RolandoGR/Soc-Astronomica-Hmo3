@@ -4,6 +4,9 @@
   font-family: "Poppins", sans-serif;
 }
 
+.content {
+  background-color: rgb(150, 150, 150);
+}
 .hero {
   min-height: 90vh;
   width: 100%;
@@ -235,17 +238,72 @@ h3 {
 /*------Image of the day-------*/
 
 .imageOfTheDay {
-  width: 80%;
-  margin: auto;
-  text-align: center;
-  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: #f7f7f7;
+  border-radius: 1rem;
+  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.7);
+}
+
+.imageOfTheDay h3 {
+  padding-top: 5%;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.apodImg {
+  width: 100%;
+  max-width: 50rem;
+  height: auto;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+}
+
+.apodExpl {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  text-align: justify;
+  color: #666;
 }
 
 /*------Activities-------*/
-
 .activities {
-  width: 80%;
   margin: auto;
   text-align: center;
   padding-top: 50px;
+  background-color: rgb(65, 65, 65);
 }
+
+.activities h1 {
+  padding-bottom: 5%;
+}
+.activities li {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  border: solid 2px black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.activities li:nth-child(even) {
+  background-color: #e5e5e5;
+}
+
+.activities li img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-left: 20px;
+  float: right;
+  border: solid 2px black;
+}
+
+/*-------------*/
