@@ -5,6 +5,7 @@ import { hideMenu } from "./mobileMenuTransition";
 import { showMenu } from "./mobileMenuTransition";
 import { hero } from "./hero";
 import { removeContent } from "./removeContent";
+import { footer } from "./footer";
 
 export function index() {
   removeContent();
@@ -25,6 +26,10 @@ export function index() {
   // create aboutUs section
   const aboutUsSection = aboutUs();
   content.appendChild(aboutUsSection);
+
+  // create footer section
+  const footerSection = footer();
+  content.appendChild(footerSection);
 }
 
 index();

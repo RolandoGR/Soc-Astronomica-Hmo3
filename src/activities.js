@@ -1,5 +1,6 @@
 import { removeContent } from "./removeContent";
 import { navigation } from "./navigation";
+import { footer } from "./footer";
 import REUNIONES from "./img/REUNIONES.jpg";
 import OBSERVACIONES from "./img/OBSERVACIONES.jpg";
 import INVESTIGACION from "./img/INVESTIGACION.jpg";
@@ -126,4 +127,8 @@ export function activities() {
   activities.appendChild(listaActividades);
 
   content.appendChild(activities);
+
+  // create footer section
+  const footerSection = footer();
+  content.appendChild(footerSection);
 }

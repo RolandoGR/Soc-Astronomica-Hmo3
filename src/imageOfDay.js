@@ -1,6 +1,7 @@
 import { removeContent } from "./removeContent";
 import { navigation } from "./navigation";
 import { keyApod } from "./keyApod";
+import { footer } from "./footer";
 
 export function imageOfTheDay() {
   removeContent();
@@ -48,6 +49,9 @@ export function imageOfTheDay() {
   imageOfTheDay.appendChild(apodTitle);
   imageOfTheDay.appendChild(apodImg);
   imageOfTheDay.appendChild(apodExpl);
-
   content.appendChild(imageOfTheDay);
+
+  // create footer section
+  const footerSection = footer();
+  content.appendChild(footerSection);
 }

@@ -1,6 +1,7 @@
 import { removeContent } from "./removeContent";
 import { navigation } from "./navigation";
 import { aboutUs } from "./aboutUs";
+import { footer } from "./footer";
 
 export function newsSection() {
   removeContent();
@@ -19,4 +20,8 @@ export function newsSection() {
   newsHeading.textContent = "Noticias";
   news.appendChild(newsHeading);
   content.appendChild(news);
+
+  // create footer section
+  const footerSection = footer();
+  content.appendChild(footerSection);
 }
