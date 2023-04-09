@@ -36,12 +36,14 @@ export function navigation() {
   closeIcon.classList.add("fa-solid", "fa-xmark");
   closeIcon.addEventListener("click", (event) => {
     event.preventDefault();
+    navLinks.classList.toggle("menuShown");
     hideMenu(navLinks);
   });
   const menuIcon = document.createElement("i");
   menuIcon.classList.add("fa-solid", "fa-bars");
   menuIcon.addEventListener("click", (event) => {
     event.preventDefault();
+    navLinks.classList.toggle("menuShown");
     showMenu(navLinks);
   });
   const ul = document.createElement("ul");

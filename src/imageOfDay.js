@@ -30,20 +30,6 @@ export function imageOfTheDay() {
   const apodExpl = document.createElement("div");
   apodExpl.classList.add("apodExpl");
 
-  function getApod() {
-    console.log(keyApod);
-    fetch(apodUrl, { mode: "cors" })
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (response) {
-        console.log(response);
-        apodImg.src = response.hdurl;
-        apodExpl.textContent = response.explanation;
-        apodTitle.textContent = response.title;
-      });
-  }
-
   getApod();
 
   imageOfTheDay.appendChild(apodTitle);
@@ -54,4 +40,22 @@ export function imageOfTheDay() {
   // create footer section
   const footerSection = footer();
   content.appendChild(footerSection);
+
+  function getApod() {
+    console.log(keyApod);
+    fetch(apodUrl, { mode: "cors" })
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (response) {
+        console.log(response);
+        responseIntoContent(response);
+      });
+  }
+
+  function responseIntoContent(response) {
+    apodImg.src = response.hdurl;
+    apodExpl.textContent = response.explanation;
+    apodTitle.textContent = response.title;
+  }
 }
