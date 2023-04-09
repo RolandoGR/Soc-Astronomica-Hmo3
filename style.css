@@ -168,12 +168,17 @@ nav .fa-solid {
     transition: 1.5s;
   }
 
-  nav .fa-solid {
+  nav .fa-xmark {
     display: block;
     color: #fff;
     margin: 10px;
     font-size: 20px;
     cursor: pointer;
+  }
+
+  nav .fa-bars {
+    display: block;
+    color: white;
   }
 
   .nav-text {
@@ -412,7 +417,6 @@ h3 {
 .circleTitle {
   display: flex;
   color: midnightblue;
-  /* font-style: oblique; */
   align-items: center;
   position: absolute;
   transform: translate(420%, 0%);
@@ -435,15 +439,16 @@ h3 {
   margin: 2%;
 }
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .circleTitle {
-    transform: translate(250%, 0%);
+    transform: translate(170%, 0%);
     width: 15vw;
     height: 15vw;
     font-size: 1em;
-    padding: 5%;
+    padding: 10%;
   }
 }
+
 /*-------------*/
 footer {
   background-color: #333;
