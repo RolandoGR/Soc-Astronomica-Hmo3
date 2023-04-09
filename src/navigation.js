@@ -34,10 +34,16 @@ export function navigation() {
   navLinks.id = "navLinks";
   const closeIcon = document.createElement("i");
   closeIcon.classList.add("fa-solid", "fa-xmark");
-  closeIcon.onclick = hideMenu;
+  closeIcon.addEventListener("click", (event) => {
+    event.preventDefault();
+    hideMenu(navLinks);
+  });
   const menuIcon = document.createElement("i");
   menuIcon.classList.add("fa-solid", "fa-bars");
-  menuIcon.onclick = showMenu;
+  menuIcon.addEventListener("click", (event) => {
+    event.preventDefault();
+    showMenu(navLinks);
+  });
   const ul = document.createElement("ul");
   const li1 = document.createElement("li");
   const link1 = document.createElement("a");
@@ -84,12 +90,10 @@ export function navigation() {
   ul.appendChild(li5);
   navLinks.appendChild(closeIcon);
   navLinks.appendChild(ul);
-  navLinks.appendChild(menuIcon);
 
   // append elements to nav
   nav.appendChild(navLogo);
-  nav.appendChild(navLinks);
-  nav.appendChild(navLogo);
+  nav.appendChild(menuIcon);
   nav.appendChild(navLinks);
 
   return nav;
