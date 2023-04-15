@@ -5,7 +5,6 @@ export function showMenu(navLinks) {
   return navLinks;
 }
 export function hideMenu(navLinks) {
-  console.log("clicked this!");
   navLinks.style.right = "-200px";
   return navLinks;
 }
