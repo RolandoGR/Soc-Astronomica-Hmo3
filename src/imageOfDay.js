@@ -69,28 +69,39 @@ export function imageOfTheDay() {
   const footerSection = footer();
   content.appendChild(footerSection);
 
+  //functions
   function responseIntoContent(apodData) {
     apodImg.src = apodData.hdurl;
+    apodImg.setAttribute("id", `img-29`);
     apodExpl.textContent = apodData.explanation;
     apodTitle.textContent = apodData.title;
   }
 
   function sideArrow(side, edit) {
     let arrow;
-    let apodData = newApodUrl;
+    //console.log(apodData);
     if (edit) {
-      let apodData = (arrow = document.getElementById(`arrow-${side}`));
+      arrow = document.getElementById(`arrow-${side}`);
     } else {
-      console.log("creating");
       arrow = document.createElement("span");
       arrow.classList.add("material-symbols-rounded");
       arrow.setAttribute("id", `arrow-${side}`);
       arrow.textContent = `chevron_${side}`;
     }
+    arrow.addEventListener("click", async (event) => {
+      let apodData = await getApodData();
+      const imgId = document.querySelector(".apodImg");
+      let index = imgId.id.substring(4);
+      let previousImg = index - 1;
+      let nextImg = parseInt(index) + 1;
 
-    arrow.addEventListener("click", (event) => {
       event.preventDefault();
-      reloadImg(event, apodData, i);
+      console.log();
+      if (side === "left") {
+        reloadImg(event, apodData, nextImg);
+      } else {
+        reloadImg(event, apodData, previousImg);
+      }
     });
     return arrow;
   }
@@ -100,12 +111,14 @@ export function imageOfTheDay() {
     let apodImg = document.getElementsByClassName("apodImg");
     let apodExpl = document.getElementsByClassName("apodExpl");
 
+    console.log("reload");
     event.preventDefault();
     apodTitle[0].textContent = `${format(
       new Date(apodData[i].date),
       "dd-MMM-y"
     )}: ${apodData[i].title}`;
     apodImg[0].src = apodData[i].url;
+    apodImg[0].setAttribute("id", `img-${i}`);
     apodExpl[0].textContent = apodData[i].explanation;
     const imageOfTheDayOffset = imageOfTheDay.offsetTop;
     window.scrollTo({ top: imageOfTheDayOffset, behavior: "smooth" });
@@ -134,10 +147,6 @@ export function imageOfTheDay() {
         this.src = notavailable;
         this.alt = "Image not available";
       });
-
-      sideArrow("left", "edit");
-      sideArrow("right", "edit");
-
       // thumnbail event listener to reload image displayed
       img.addEventListener("click", (event) => {
         reloadImg(event, apodData, i);
