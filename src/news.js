@@ -16,4 +16,18 @@ export function newsSection() {
   const nav = navigation();
   header.appendChild(nav);
   content.appendChild(header);
+
+  // create news section
+  const newsSection = document.createElement("newsSection");
+  newsSection.classList.add("newsSection");
+
+  //create news heading
+  const newsHeading = document.createElement("h1");
+  newsHeading.textContent = "Noticias";
+
+  const newsText = document.createElement("div");
+  newsText.textContent = "En construcción :)";
+
+  content.appendChild(newsHeading);
+  content.appendChild(newsText);
 }

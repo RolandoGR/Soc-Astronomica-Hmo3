@@ -7,6 +7,8 @@ import { isToday, startOfDay, startOfToday, format, sub } from "date-fns";
 import notavailable from "./img/notavailable.png";
 
 export function imageOfTheDay() {
+  let currentIndex = 29;
+
   // Manage dates
   const formattedEndDate = format(startOfToday(), "yyyy-MM-dd");
   const startDate = sub(new Date(formattedEndDate), {
@@ -70,16 +72,15 @@ export function imageOfTheDay() {
   content.appendChild(footerSection);
 
   //functions
-  function responseIntoContent(apodData) {
-    apodImg.src = apodData.hdurl;
-    apodImg.setAttribute("id", `img-29`);
-    apodExpl.textContent = apodData.explanation;
-    apodTitle.textContent = apodData.title;
+  function responseIntoContent(apodData, index) {
+    apodImg.src = apodData[index].hdurl;
+    apodImg.setAttribute("id", `img-${index}`);
+    apodExpl.textContent = apodData[index].explanation;
+    apodTitle.textContent = apodData[index].title;
   }
 
   function sideArrow(side, edit) {
     let arrow;
-    //console.log(apodData);
     if (edit) {
       arrow = document.getElementById(`arrow-${side}`);
     } else {
@@ -90,28 +91,26 @@ export function imageOfTheDay() {
     }
     arrow.addEventListener("click", async (event) => {
       let apodData = await getApodData();
-      const imgId = document.querySelector(".apodImg");
-      let index = imgId.id.substring(4);
-      let previousImg = index - 1;
-      let nextImg = parseInt(index) + 1;
-
-      event.preventDefault();
-      console.log();
       if (side === "left") {
-        reloadImg(event, apodData, nextImg);
+        currentIndex++;
+        if (currentIndex >= apodData.length) {
+          currentIndex = 0;
+        }
       } else {
-        reloadImg(event, apodData, previousImg);
+        currentIndex--;
+        if (currentIndex < 0) {
+          currentIndex = apodData.length - 1;
+        }
       }
+      responseIntoContent(apodData, currentIndex);
     });
     return arrow;
   }
-
   function reloadImg(event, apodData, i) {
     let apodTitle = document.getElementsByClassName("apodTitle");
     let apodImg = document.getElementsByClassName("apodImg");
     let apodExpl = document.getElementsByClassName("apodExpl");
 
-    console.log("reload");
     event.preventDefault();
     apodTitle[0].textContent = `${format(
       new Date(apodData[i].date),
@@ -132,8 +131,7 @@ export function imageOfTheDay() {
 
   async function displayApod() {
     let apodData = await getApodData();
-
-    responseIntoContent(apodData[29]);
+    responseIntoContent(apodData, currentIndex);
 
     for (let i = apodData.length - 1; i >= 0; i--) {
       const img = document.createElement("img");
